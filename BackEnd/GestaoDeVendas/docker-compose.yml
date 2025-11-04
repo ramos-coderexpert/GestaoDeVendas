@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    platform: linux/amd64
+    container_name: gestao-vendas-sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=password@123
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    networks:
+      - gestao-vendas-network
+    healthcheck:
+      test: /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P password@123 -Q "SELECT 1" -C || exit 1
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+
+  api:
+    image: gestao-vendas-api
+    platform: linux/amd64
+    container_name: gestao-vendas-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=GestaoVendasDB;User Id=sa;Password=password@123;TrustServerCertificate=True;
+      - Jwt__Issuer=GestaoDeVendas
+      - Jwt__Audience=GestaoDeVendas
+      - Jwt__Key=pneumo#ultramicroscopicos@silico#vulcano$cociotico
+      - Jwt__ExpirationTimeInMinutes=5
+    ports:
+      - "5000:8080"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - gestao-vendas-network
+
+
+networks:
+  gestao-vendas-network:
+    driver: bridge

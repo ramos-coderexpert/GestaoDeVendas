@@ -1,0 +1,15 @@
+text .dockerignore
+**/.git
+**/.gitignore
+**/.vs
+**/.vscode
+**/bin
+**/obj
+**/*.user
+**/*.suo
+**/node_modules
+**/TestResults
+**/.env
+**/docker-compose*.yml
+**/.dockerignore
+**/*.md

@@ -79,7 +79,7 @@ Lembre-se:
 
 4. Criar banco de dados
   - cd GestaoDeVendas.Api
-  - dotnet ef database update
+  - `dotnet ef database update --project GestaoDeVendas.Infrastructure`
 
 5. Rodar
   - dotnet run --launch-profile "https"

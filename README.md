@@ -56,7 +56,8 @@ Pronto! A API estará disponível em: http://localhost:5000/swagger
 
 Lembre-se:
 
-### **Se não conseguir acessar através de https://localhost:5000**
-✅ **Use HTTP:** http://localhost:5000/swagger (sem o 's')
+- O link para acesso no Browser é http://localhost:5000/swagger (http -> sem o 's')
+
+
 
 

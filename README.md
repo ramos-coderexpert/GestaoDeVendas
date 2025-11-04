@@ -40,7 +40,7 @@ Apenas necessário se quiser rodar localmente fora do Docker:
 ### **Passo 1: Clonar o Repositório**
 
 - abra um prompt de comando dentro do diretório C:
-- digite o seguinte comando: `git clone https://github.com/testeCmCapital/TesteLucasRamos.git` e pressione enter
+- digite o seguinte comando: `git clone https://github.com/ramos-coderexpert/GestaoDeVendas.git` e pressione enter
 
 ### **Passo 2: Build da Imagem Docker**
 - abra um prompt de comando dentro da raiz do projeto (no mesmo diretório onde você encontra o arquivo de solution "GestaoDeVendas.sln")

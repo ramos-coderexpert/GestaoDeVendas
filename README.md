@@ -82,7 +82,7 @@ Lembre-se:
   - `dotnet ef database update --project GestaoDeVendas.Infrastructure`
 
 5. Rodar
-  - dotnet run --launch-profile "https"
+  - `dotnet run --launch-profile "https" `
 
 
 

@@ -80,6 +80,7 @@ Lembre-se:
 4. Criar banco de dados
   - `cd GestaoDeVendas.Api`
   - `dotnet ef database update --project GestaoDeVendas.Infrastructure`
+  - Se o comando acima retornar um erro, tente o seguinte, dentro do Package Manager Console: `Update-Database`
 
 5. Rodar
   - `dotnet run --launch-profile "https" `

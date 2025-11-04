@@ -59,5 +59,12 @@ Lembre-se:
 - O link para acesso no Browser é http://localhost:5000/swagger (http -> sem o 's')
 
 
+## 🔧 Como Começar
+
+- tente primeiro criar um cliente para si, guarde o email e a senha.
+- faça o login através do endpoint /Clientes/login
+- copie o token JWT e utilize no authorizer confirme as instruções
+
+
 
 

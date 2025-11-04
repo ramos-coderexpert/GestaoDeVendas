@@ -66,5 +66,24 @@ Lembre-se:
 - copie o token JWT e utilize no authorizer confirme as instruções
 
 
+Se preferir rodar o projeto Sem Docker:
+
+# 1. Clonar
+git clone https://github.com/testeCmCapital/TesteLucasRamos.git
+cd TesteLucasRamos
+
+# 2. Ajustar appsettings.json (connection string) -> (tente utilizar o banco de dados localmente)
+
+# 3. Restaurar dependências
+dotnet restore
+
+# 4. Criar banco de dados
+cd GestaoDeVendas.Api
+dotnet ef database update
+
+# 5. Rodar
+dotnet run
+
+
 
 

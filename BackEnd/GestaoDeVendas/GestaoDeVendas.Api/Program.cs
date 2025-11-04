@@ -1,4 +1,4 @@
-using GestaoDeVendas.Api.Middlewares;
+ï»¿using GestaoDeVendas.Api.Middlewares;
 using GestaoDeVendas.Application;
 using GestaoDeVendas.Infrastructure;
 using GestaoDeVendas.Infrastructure.Persistance.Context;
@@ -23,8 +23,8 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "Gestão de Vendas API",
-        Description = "API para Gestão de Vendas - Lucas Ramos",
+        Title = "GestÃ£o de Vendas API",
+        Description = "API para GestÃ£o de Vendas - Lucas Ramos",
         TermsOfService = new Uri("https://exemplo.net/terms"),
         Contact = new OpenApiContact
         {
@@ -34,7 +34,7 @@ builder.Services.AddSwaggerGen(c =>
         },
         License = new OpenApiLicense
         {
-            Name = "Licença de Uso",
+            Name = "LicenÃ§a de Uso",
             Url = new Uri("https://exemplo.com/license")
         }
     });
@@ -46,7 +46,7 @@ builder.Services.AddSwaggerGen(c =>
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Header de autorização JWT usando o esquema Bearer. \r\n\r\nInforme 'Bearer'[espaço] e o seu token;\r\n\r\nExemplo: \'Bearer 12345abcdef\'",
+        Description = "Header de autorizaÃ§Ã£o JWT usando o esquema Bearer. \r\n\r\nInforme 'Bearer'[espaÃ§o] e o seu token;\r\n\r\nExemplo: \'Bearer 12345abcdef\'",
     });
 
     c.AddSecurityRequirement(new OpenApiSecurityRequirement

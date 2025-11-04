@@ -69,16 +69,16 @@ Lembre-se:
 ## Se preferir rodar o projeto Sem Docker:
 
 1. Clonar
-  - git clone https://github.com/testeCmCapital/TesteLucasRamos.git
-  - cd GestaoDeVendas/BackEnd/GestaoDeVendas
+  - `git clone https://github.com/testeCmCapital/TesteLucasRamos.git`
+  - `cd GestaoDeVendas/BackEnd/GestaoDeVendas`
 
 2. Ajustar appsettings.json (connection string) -> (tente utilizar o banco de dados localmente)
 
 3. Restaurar dependências
-  - dotnet restore
+  - `dotnet restore`
 
 4. Criar banco de dados
-  - cd GestaoDeVendas.Api
+  - `cd GestaoDeVendas.Api`
   - `dotnet ef database update --project GestaoDeVendas.Infrastructure`
 
 5. Rodar

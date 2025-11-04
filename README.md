@@ -69,8 +69,8 @@ Lembre-se:
 ## Se preferir rodar o projeto Sem Docker:
 
 1. Clonar
-git clone https://github.com/testeCmCapital/TesteLucasRamos.git
-  - cd TesteLucasRamos
+  - git clone https://github.com/testeCmCapital/TesteLucasRamos.git
+  - cd GestaoDeVendas/BackEnd/GestaoDeVendas
 
 2. Ajustar appsettings.json (connection string) -> (tente utilizar o banco de dados localmente)
 
@@ -82,7 +82,7 @@ git clone https://github.com/testeCmCapital/TesteLucasRamos.git
   - dotnet ef database update
 
 5. Rodar
-  - dotnet run
+  - dotnet run --launch-profile "https"
 
 
 

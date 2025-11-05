@@ -5,6 +5,7 @@ using GestaoDeVendas.Infrastructure.Persistance.Context;
 using GestaoDeVendas.Infrastructure.Persistance.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -28,7 +29,7 @@ namespace GestaoDeVendas.Infrastructure
         {
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString).ConfigureWarnings(w => w.Ignore(RelationalEventId.CommandExecuted)));
 
             return services;
         }
